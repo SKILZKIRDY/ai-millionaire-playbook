@@ -1,4 +1,4 @@
-name: Deploy Supabase Edge Functions
+name: Deploy Function
 
 on:
   push:
@@ -21,7 +21,4 @@ jobs:
         with:
           version: latest
 
-      - run: supabase functions deploy --project-ref $SUPABASE_PROJECT_IDcd ~/my-ai-app
-git add .github/workflows/deploy-supabase-functions.yml
-git commit -m "add supabase deploy action"
-git push origin main
+      - run: supabase functions deploy --project-ref $SUPABASE_PROJECT_ID
